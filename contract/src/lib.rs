@@ -103,7 +103,7 @@ impl Contract {
 
     // バイク 使用可 -> 点検中
     pub fn inspect_bike(&mut self, index: usize) {
-        let user_id = env::predecessor_account_id();
+        let user_id = env::predecessor_account_id(); 
         log!("{} inspects bike", &user_id);
 
         match &self.bikes[index] {
